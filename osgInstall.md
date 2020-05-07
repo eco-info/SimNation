@@ -41,6 +41,16 @@ A documentação fala de # make install_ld_conf, mas comigo não funcionou. Ao i
 Inserir a linha
 ${CMAKE_INSTALL_PREFIX}lib${LIB_POSTFIX}
 # ldconfig
+```
 
+Baixar os dados de exemplo.
 
+```
+http://www.openscenegraph.org/index.php/download-section/31-data
+Baixei do link OpenSceneGraph-Data-3.4.0.zip
+(http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/data/OpenSceneGraph-Data-3.4.0.zip)
+
+$ cd ~/Downloads/OpenSceneGraph-Data/
+$ osgviewer cow.osg
+OK - já dá pra ver a vaca metálica flutuando, podendo ser manipulada com o mouse.
 ```
