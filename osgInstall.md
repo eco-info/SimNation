@@ -86,3 +86,19 @@ E ainda os livros:
 - Rui Wang & Xuelei Qian, 2012. OpenSceneGraph 3 Cookbook: Over 80 recipes to show advanced 3D programming techniques with the OpenSceneGraph API.
 
 Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
+
+Tentando com o [VirtualPlanetBuilder](https://github.com/openscenegraph/VirtualPlanetBuilder):
+
+Baixei em ~/Downloads e descompactei. Depois:
+
+```
+$ cd ~/Downloads/VirtualPlanetBuilder-master
+$ ./configure
+$ cmake .
+$ make
+# make install
+$ ls bin
+osgdem  vpbcache  vpbmaster  vpbsizes
+```
+
+Não sei se o `cmake .` é realmente necessário. O executável mais importante foi criado, vpbmaster, que será usado no capítulo 7 do Cookbook.
