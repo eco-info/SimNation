@@ -69,3 +69,20 @@ Warning: no valid data loaded, please specify a database on the command line.
 ```
 
 Agora é achar que tipo de dados ele pede.
+
+Ainda não encontrei documentação pra classe osgTerrain, que já vem com o osg. Mas encontrei outros links:
+
+- http://www.openscenegraph.org/index.php/documentation/user-guides/57-osgdem
+- https://www.osgvisual.org/wiki/OsgTerrainData
+- http://docs.osgearth.org/en/latest/data.html
+- https://github.com/openscenegraph/VirtualPlanetBuilder
+- http://www.openscenegraph.org/index.php/documentation/tools/virtual-planet-builder
+- http://www.andesengineering.com/BlueMarbleViewer/
+
+E ainda os livros:
+
+- Rui Wang & Xuelei Qian, 2010. OpenSceneGraph 3.0 Beginner's Guide: Create high-performance virtual reality applications with OpenSceneGraph, one of the best 3D graphics engines.
+- Paul Martz, 2007. OpenSceneGraph Quick Start Guide: A Quick Introduction to the Cross-Platform Open Source Scene Graph API.
+- Rui Wang & Xuelei Qian, 2012. OpenSceneGraph 3 Cookbook: Over 80 recipes to show advanced 3D programming techniques with the OpenSceneGraph API.
+
+Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
