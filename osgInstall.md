@@ -28,7 +28,7 @@ $ glxgears -info
 O que eu precisei instalar.
 ```
 # apt install cmake libgl1-mesa-dev
-(You may also want libglu1-mesa-dev, freeglut3-dev)
+(Pode também ser preciso libglu1-mesa-dev, freeglut3-dev)
 
 $ cd ~/Downloads/OpenSceneGraph-OpenSceneGraph-3.6.5
 $ cmake .
@@ -52,5 +52,9 @@ Baixei do link OpenSceneGraph-Data-3.4.0.zip
 
 $ cd ~/Downloads/OpenSceneGraph-Data/
 $ osgviewer cow.osg
-OK - já dá pra ver a vaca metálica flutuando, podendo ser manipulada com o mouse.
+Já dá pra ver a vaca metálica flutuando, podendo ser manipulada:
+ - botão esquerdo e arrastar: girar o modelo
+ - botão direito e arrastar (ou rodinha do mouse): zoom
+ - botão do meio (rodinha) e arrastar: mover o modelo
+ - barra de espaço no teclado: voltar à posição inicial
 ```
