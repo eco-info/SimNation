@@ -58,3 +58,14 @@ Já dá pra ver a vaca metálica flutuando, podendo ser manipulada:
  - botão do meio (rodinha) e arrastar: mover o modelo
  - barra de espaço no teclado: voltar à posição inicial
 ```
+
+Compilando osgTerrain
+
+```
+$ cd ~/Downloads/OpenSceneGraph-OpenSceneGraph-3.6.5/examples/osgterrain
+$ g++ osgterrain.cpp -lOpenThreads -losg -losgDB -losgViewer -losgGA -losgTerrain -losgFX -o osgterrain
+$ ./osgterrain 
+Warning: no valid data loaded, please specify a database on the command line.
+```
+
+Agora é achar que tipo de dados ele pede.
