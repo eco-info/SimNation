@@ -132,3 +132,28 @@ osgdem  vpbcache  vpbmaster  vpbsizes
 
 Não sei se o `cmake .` é realmente necessário. O executável mais importante foi criado, vpbmaster, que será usado no capítulo 7 do Cookbook.
 
+#### Usando o vpbmaster para criar os arquivos de terreno
+
+
+`vpbmaster` estava dando o seguinte erro:
+`vpbmaster: error while loading shared libraries: libvpb.so.30: cannot open shared object file: No such file or directory`
+
+Precisei criar a variável de ambiente `LD_LIBRARY_PATH` apontando para o diretório do `libvpb.so.30`. Acrescentei ao .bashrc:
+
+`export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64/`
+
+Com isso, o comando
+
+`vpbmaster -d BRalt.tif -t br.png -o BR.osgb`
+
+criou 65 MB de arquivos em 17 pastas (BR_root_L0_X0_Y0 até BR_subtile_L3_X3_Y3), mais 86 kB em 5 arquivos (BR.osgb e família). Agora sim:
+
+`osgviewer BR.osgb`
+
+mostra um terreno com textura, mas aparentemente plano:
+
+![](BRt3D1.png)
+
+Olhando mais de perto, vemos onde o relevo foi parar:
+
+![](BRt3D2.png)
