@@ -72,6 +72,7 @@ Agora é achar que tipo de dados ele pede.
 
 Ainda não encontrei documentação pra classe osgTerrain, que já vem com o osg. Mas encontrei outros links:
 
+- https://groups.google.com/forum/#!forum/osg-users
 - http://www.openscenegraph.org/index.php/documentation/user-guides/57-osgdem
 - https://www.osgvisual.org/wiki/OsgTerrainData
 - http://docs.osgearth.org/en/latest/data.html
