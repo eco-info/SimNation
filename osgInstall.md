@@ -1,4 +1,4 @@
-# Instalando o OpenSceneGraph (OSG)
+# Instalando e usando o OpenSceneGraph (OSG)
 
 http://www.openscenegraph.org/
 
@@ -88,7 +88,35 @@ E ainda os livros:
 
 Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
 
-Tentando com o [VirtualPlanetBuilder](https://github.com/openscenegraph/VirtualPlanetBuilder):
+---
+
+#### Visualizando arquivos de relevo.
+
+Encontrei [essa thread](https://groups.google.com/forum/#!searchin/osg-users/osgterrain$20data$20format|sort:date/osg-users/UoYOwKja4L8/n7OIZH3WCgAJ) que me deu a ideia de colocar .gdal no nome do arquivo.
+
+`osgviewer --dem BRalt.tif.gdal`
+
+gerou uma visualização 3D desta imagem:
+
+![](BRalt.tif.png)
+
+que ficou mais ou menos assim:
+
+![](BRalt3D.png)
+
+Detalhe: não precisei renomear o arquivo de BRalt.tif pra BRalt.tif.gdal.
+
+Ainda não é o que precisamos, mas já é um passo na direção certa. Os próximos passos são:
+
+- Ajustar a posição e movimento da câmera;
+- Colocar o relevo na escala desejada;
+- Acrescentar a textura (br.png);
+- Fazer tudo isso (principalmente) via C++, e não (somente) pelo osgviewer.
+
+
+---
+
+#### Tentando com o [VirtualPlanetBuilder](https://github.com/openscenegraph/VirtualPlanetBuilder):
 
 Baixei em ~/Downloads e descompactei. Depois:
 
@@ -103,3 +131,4 @@ osgdem  vpbcache  vpbmaster  vpbsizes
 ```
 
 Não sei se o `cmake .` é realmente necessário. O executável mais importante foi criado, vpbmaster, que será usado no capítulo 7 do Cookbook.
+
