@@ -157,3 +157,35 @@ mostra um terreno com textura, mas aparentemente plano:
 Olhando mais de perto, vemos onde o relevo foi parar:
 
 ![](BRt3D2.png)
+
+#### Juntando vários rasters
+
+Primeiro baixei vários arquivos contíguos de relevo do projeto [SRTM](http://srtm.csi.cgiar.org/srtmdata/), do CGIAR (Consortium for Spatial Information), salvando todos na mesma pasta (SRTM).
+
+Depois o comando para processá-los:
+
+`vpbmaster -d SRTM -t earthmap_hires.jpg --geocentric -o output/out.osgb`
+
+Parece que a textura também deve estar georreferenciada, pois não apareceu no resultado (`osgviewer out.osgb`).
+
+![](MG3D8a.png)
+
+![](MG3D8b.png)
+
+Embora o relevo tenha apresentado alta resolução de perto, os arquivos gerados ocuparam 914 MB. No produto final, será usada apenas uma fração dessa qualidade, tanto pela redução da resolução dos arquivos de relevo, quanto com um número menor de camadas intermediárias (o padrão aqui foi 8). Gerando, por exemplo, 3 camadas intermediárias:
+
+`vpbmaster -l 3 -d SRTM -t earthmap_hires.jpg --geocentric -o output3/out.osgb`
+
+os arquivos gerados ocuparam apenas 22.9 kB, mas o resultado ficou bastante rudimentar:
+
+![](MG3D3.png)
+
+Gerando 6 camadas intermediárias:
+
+`vpbmaster -l 6 -d SRTM -t earthmap_hires.jpg --geocentric -o output6/out.osgb`
+
+os arquivos gerados ocuparam 5.4 MB, e o resultado ficou bem mais satisfatório.
+
+![](MG3D6.png)
+
+Lembrando que as imagens acima representam 4 grids do SRTM, ou seja, uma região de 10x10 graus: 15 a 25° sul, 40 a 50° oeste.
