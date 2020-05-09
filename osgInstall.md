@@ -108,7 +108,6 @@ Encontrei [essa thread](https://groups.google.com/forum/#!searchin/osg-users/osg
 
 Para instalar o GDAL
 
-`sudo apt-get install gdal-bin`
 `sudo apt-get install libgdal-dev`
 
 Para visualizar a imagem
