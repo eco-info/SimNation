@@ -6,6 +6,13 @@ Salvar e descompactar o repositório (eu coloquei em ~/Downloads).
 
 https://github.com/openscenegraph/OpenSceneGraph/tree/OpenSceneGraph-3.6.5
 
+Ou baixe usando git-clone
+
+```
+(link http://www.openscenegraph.org/index.php/download-section/stable-releases/237-openscenegraph-3.6.5-released)
+$ git clone --branch OpenSceneGraph-3.6.5 https://github.com/openscenegraph/OpenSceneGraph.git
+```
+
 ## Debian 10
 
 Para ver a versão da placa de vídeo e outras informações. Os dados abaixo são do meu PC.
@@ -61,18 +68,13 @@ Já dá pra ver a vaca metálica flutuando, podendo ser manipulada:
 
 Compilando osgTerrain
 
-```
-$ cd ~/Downloads/OpenSceneGraph-OpenSceneGraph-3.6.5/examples/osgterrain
-$ g++ osgterrain.cpp -lOpenThreads -losg -losgDB -losgViewer -losgGA -losgTerrain -losgFX -o osgterrain
-$ ./osgterrain 
-Warning: no valid data loaded, please specify a database on the command line.
-```
+`$ cd ~/Downloads/OpenSceneGraph-OpenSceneGraph-3.6.5/examples/osgterrain`
 
-Baixando via git-clone
+Caso tenha baixado por git-clone
+
+`$ cd ~/Downloads/OpenSceneGraph/examples/osgterrain`
 
 ```
-(link http://www.openscenegraph.org/index.php/download-section/stable-releases/237-openscenegraph-3.6.5-released)
-$ git clone --branch OpenSceneGraph-3.6.5 https://github.com/openscenegraph/OpenSceneGraph.git
 $ g++ osgterrain.cpp -lOpenThreads -losg -losgDB -losgViewer -losgGA -losgTerrain -losgFX -o osgterrain
 $ ./osgterrain 
 Warning: no valid data loaded, please specify a database on the command line.
@@ -103,6 +105,11 @@ Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
 #### Visualizando arquivos de relevo.
 
 Encontrei [essa thread](https://groups.google.com/forum/#!searchin/osg-users/osgterrain$20data$20format|sort:date/osg-users/UoYOwKja4L8/n7OIZH3WCgAJ) que me deu a ideia de colocar .gdal no nome do arquivo.
+
+Para instalar o GDAL
+`sudo apt-get install gdal-bin`
+
+Para visualizar a imagem
 
 `osgviewer --dem BRalt.tif.gdal`
 
