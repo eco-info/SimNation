@@ -107,7 +107,9 @@ Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
 Encontrei [essa thread](https://groups.google.com/forum/#!searchin/osg-users/osgterrain$20data$20format|sort:date/osg-users/UoYOwKja4L8/n7OIZH3WCgAJ) que me deu a ideia de colocar .gdal no nome do arquivo.
 
 Para instalar o GDAL
+
 `sudo apt-get install gdal-bin`
+`sudo apt-get install libgdal-dev`
 
 Para visualizar a imagem
 
