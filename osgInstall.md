@@ -68,6 +68,16 @@ $ ./osgterrain
 Warning: no valid data loaded, please specify a database on the command line.
 ```
 
+Baixando via git-clone
+
+```
+(link http://www.openscenegraph.org/index.php/download-section/stable-releases/237-openscenegraph-3.6.5-released)
+$ git clone --branch OpenSceneGraph-3.6.5 https://github.com/openscenegraph/OpenSceneGraph.git
+$ g++ osgterrain.cpp -lOpenThreads -losg -losgDB -losgViewer -losgGA -losgTerrain -losgFX -o osgterrain
+$ ./osgterrain 
+Warning: no valid data loaded, please specify a database on the command line.
+```
+
 Agora é achar que tipo de dados ele pede.
 
 Ainda não encontrei documentação pra classe osgTerrain, que já vem com o osg. Mas encontrei outros links:
