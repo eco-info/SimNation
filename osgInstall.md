@@ -243,6 +243,8 @@ Agora falta descobrir como manipular a câmera usando as teclas ASDW (ou setas) 
 
 Primeiro baixei vários arquivos contíguos de relevo do projeto [SRTM](http://srtm.csi.cgiar.org/srtmdata/), do CGIAR (Consortium for Spatial Information), salvando todos na mesma pasta (SRTM).
 
+A textura global (earthmap_hires.jpg) baixei [daqui](http://flatplanet.sourceforge.net/maps/images/earthmap_hires.jpg).
+
 Depois o comando para processá-los:
 
 `vpbmaster -d SRTM -t earthmap_hires.jpg --geocentric -o output/out.osgb`
