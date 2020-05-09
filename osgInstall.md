@@ -136,6 +136,7 @@ Não sei se o `cmake .` é realmente necessário. O executável mais importante 
 
 
 `vpbmaster` estava dando o seguinte erro:
+
 `vpbmaster: error while loading shared libraries: libvpb.so.30: cannot open shared object file: No such file or directory`
 
 Precisei criar a variável de ambiente `LD_LIBRARY_PATH` apontando para o diretório do `libvpb.so.30`. Acrescentei ao .bashrc:
@@ -157,6 +158,48 @@ mostra um terreno com textura, mas aparentemente plano:
 Olhando mais de perto, vemos onde o relevo foi parar:
 
 ![](BRt3D2.png)
+
+
+Faltavam os arquivos .wld (world files) para o relevo e a textura:
+
+```
+br.wld:
+0.008925319
+0
+0
+-0.008925319
+-74.0
+5.333333333
+
+BRalt.wld:
+0.066666667
+0
+0
+-0.066666667
+-74.0
+5.333333333
+```
+
+Cada arquivo .wld é um arquivo-texto com seis linhas, cada uma com um valor decimal:
+
+- Linha 1: tamanho do pixel no eixo X.
+- Linha 2: rotação sobre X (geralmente 0).
+- Linha 3: rotação sobre Y (geralmente 0).
+- Linha 4: tamanho do pixel no eixo Y. Costuma ser negativo porque imagens são armazenadas de cima para baixo.
+- Linha 5: longitude (X) central do pixel superior-esquerdo (-74 aqui).
+- Linha 6: latitude (Y) central do pixel superior-esquerdo (5.333333 aqui).
+
+Faltava ainda regular o multiplicador vertical, feito com o parâmetro -v do `vpbmaster`.
+
+`vpbmaster -v 0.01 -d BRalt.tif -t br.png -o outBR6/BR6.osgb`
+
+`osgviewer outBR6/BR6.osgb`
+
+![](BRt3Dok.png)
+
+![](BRt3Dseam.png)
+
+Na última imagem aparecem as "costuras" onde se encontram as camadas criadas pelo vpbmaster. Falta descobrir como resolver isso.
 
 #### Juntando vários rasters
 
