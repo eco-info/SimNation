@@ -9,7 +9,6 @@ https://github.com/openscenegraph/OpenSceneGraph/tree/OpenSceneGraph-3.6.5
 Ou baixe usando git-clone
 
 ```
-(link http://www.openscenegraph.org/index.php/download-section/stable-releases/237-openscenegraph-3.6.5-released)
 $ git clone --branch OpenSceneGraph-3.6.5 https://github.com/openscenegraph/OpenSceneGraph.git
 ```
 
