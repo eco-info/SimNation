@@ -201,6 +201,27 @@ Faltava ainda regular o multiplicador vertical, feito com o parâmetro -v do `vp
 
 Na última imagem aparecem as "costuras" onde se encontram as camadas criadas pelo vpbmaster. Falta descobrir como resolver isso.
 
+Agora é possível carregar o terreno via C++, modificando um pouco o código do exercício [Cookbook 2.3](https://github.com/eco-info/osgCookbook2.3)
+
+```
+#include <osgDB/ReadFile>
+#include <osgViewer/Viewer>
+
+int main( int argc, char** argv )
+{
+	osg::ref_ptr<osg::Group> root = new osg::Group;
+	root->addChild( osgDB::readNodeFile("BR6.osgb") );
+	osgViewer::Viewer viewer;
+	viewer.setSceneData( root.get() );
+	return viewer.run();
+}
+```
+Este código pode ser compilado assim:
+
+`g++ terrain1.cpp -losg -losgDB -losgViewer -o terrain1`
+
+Agora falta descobrir como manipular a câmera usando as teclas ASDW (ou setas) e outras teclas auxiliares, como QERF, PageUp, PageDown...
+
 #### Juntando vários rasters
 
 Primeiro baixei vários arquivos contíguos de relevo do projeto [SRTM](http://srtm.csi.cgiar.org/srtmdata/), do CGIAR (Consortium for Spatial Information), salvando todos na mesma pasta (SRTM).
