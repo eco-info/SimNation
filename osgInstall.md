@@ -218,6 +218,17 @@ Faltava ainda regular o multiplicador vertical, feito com o parâmetro -v do `vp
 
 Na última imagem aparecem as "costuras" onde se encontram as camadas criadas pelo vpbmaster. Falta descobrir como resolver isso.
 
+(Abre parênteses)
+
+NÃO TESTADO. Ver se o comando abaixo resolve o problema das "costuras" acima (ou caminha nessa direção, ou resolve algum outro problema futuro).
+
+Fonte: [Using osgdem to generate geospatial terrain databases](http://openscenegraph.sourceforge.net/documentation/OpenSceneGraph/doc/osgdem.html)
+```
+gdal_translate ps_height_16k.png ps_height_16k.tif gdaladdo -r average ps_height_16k.tif 2 4 8 16 32
+gdal_translate ps_texture_16k.png ps_texture_16k.tif gdaladdo -r average ps_texture_16k.tif 2 4 8 16 32
+```
+(Fecha parênteses)
+
 Agora é possível carregar o terreno via C++, modificando um pouco o código do exercício [Cookbook 2.3](https://github.com/eco-info/osgCookbook2.3)
 
 ```
