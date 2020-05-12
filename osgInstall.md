@@ -31,11 +31,23 @@ $ glxgears -info
 300 frames in 5.0 seconds = 59.883 FPS
 ```
 
-O que eu precisei instalar.
-```
-# apt install cmake libgl1-mesa-dev
-(Pode também ser preciso libglu1-mesa-dev, freeglut3-dev)
+Aparentemente, o GDAL deve ser instalado antes de compilarmos o OSG.
 
+No Debian:
+
+`sudo apt install libgdal-dev`
+
+No Ubuntu:
+
+`sudo apt-get install libgdal-dev`
+
+O que eu precisei instalar. (Pode também ser preciso libglu1-mesa-dev e freeglut3-dev.)
+
+`sudo apt install cmake libgl1-mesa-dev`
+
+Depois:
+
+```
 $ cd ~/Downloads/OpenSceneGraph-OpenSceneGraph-3.6.5
 $ cmake .
 $ make
@@ -104,10 +116,6 @@ Os três livros podem ser encontrados na Library Genesis (http://libgen.is/).
 #### Visualizando arquivos de relevo.
 
 Encontrei [essa thread](https://groups.google.com/forum/#!searchin/osg-users/osgterrain$20data$20format|sort:date/osg-users/UoYOwKja4L8/n7OIZH3WCgAJ) que me deu a ideia de colocar .gdal no nome do arquivo.
-
-Para instalar o GDAL
-
-`sudo apt-get install libgdal-dev`
 
 Para visualizar a imagem
 
