@@ -45,6 +45,10 @@ O que eu precisei instalar. (Pode também ser preciso libglu1-mesa-dev e freeglu
 
 `sudo apt install cmake libgl1-mesa-dev`
 
+Para poder usar diferentes fontes (ao menos uma fonte melhor que a quadradona padrão), instalar também:
+
+`sudo apt install libfreetype6-dev`
+
 Depois:
 
 ```
