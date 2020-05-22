@@ -24,7 +24,7 @@ Para unir os 4 tiles, rodei no R:
 #### GLC2000 (Global Land Cover 2000 Project)
 
 - Resolução de 1 km
-- 22 classes
+- 22 classes ao todo (+1 "sem dados")
 
 https://forobs.jrc.ec.europa.eu/products/glc2000/glc2000.php
 
@@ -82,7 +82,7 @@ dev.off()
 #### CCI Land Cover V2 (Climate Change Initiative)
 
 - Resolução de 300 m
-- 23 (37?) classes
+- 27 classes pro Brasil (37 ao todo?)
 - Imagens anuais de 1992 a 2015
 
 http://maps.elie.ucl.ac.be/CCI/viewer/download.php
