@@ -9,15 +9,18 @@ https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cul
 http://srtm.csi.cgiar.org/srtmdata/ (Tile 30 x 30 degree)
 
 Para o Brasil, salvei os tiles
-- S30W060
+
+- S60W090
+- S60W060
+- S60W030
 - S30W090
+- S30W060
+- S30W030
 - N00W090
 - N00W060
+- N00W030
 
-Para unir os 4 tiles, rodei no R:
-
-```
-```
+Para conseguir uni-las precisei primeiro reduzir em 2 vezes sua resolução no QGIS (com a função r.resample do GRASS). Depois as uni de 3 em 3, e finalmente as 3 tiras assim formadas (no menu Raster|Miscellaneous|Merge). Depois disso recortei apenas o retângulo do Brasil, a partir do raster de cobertura vegetal, abaixo (menu Raster|Extraction|Clip Raster by Extent).
 
 ### Cobertura vegetal
 
@@ -82,7 +85,7 @@ dev.off()
 #### CCI Land Cover V2 (Climate Change Initiative)
 
 - Resolução de 300 m
-- 27 classes pro Brasil (37 ao todo?)
+- 25 classes pro Brasil (37 ao todo?)
 - Imagens anuais de 1992 a 2015
 
 http://maps.elie.ucl.ac.be/CCI/viewer/download.php
